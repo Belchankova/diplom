@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_diaApp_FILE /home/belka/diaApp/build/Android_Qt_6_8_2_Clang_x86_64-Debug/libdiaApp_x86_64.so)
+set(__QT_DEPLOY_TARGET_diaApp_TYPE MODULE_LIBRARY)

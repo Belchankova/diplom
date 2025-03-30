@@ -1,0 +1,26 @@
+{
+	"BUILD_DIR" : "/home/belka/diaApp/build/Desktop-Debug/diaApp_autogen",
+	"CMAKE_BINARY_DIR" : "/home/belka/diaApp/build/Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/belka/diaApp/build/Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/belka/diaApp",
+	"CMAKE_SOURCE_DIR" : "/home/belka/diaApp",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/belka/diaApp/build/Desktop-Debug/diaApp_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/belka/diaApp/IMG_2185.PNG",
+		"/home/belka/\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f/fon.PNG"
+	],
+	"LOCK_FILE" : "/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/diaApp_autogen.dir/AutoRcc_resourses_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resourses" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resourses.cpp",
+	"RCC_EXECUTABLE" : "/home/belka/Qt/6.8.2/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/diaApp_autogen.dir/AutoRcc_resourses_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/belka/diaApp/resourses.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,178 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f26b995e7b7049ff2359.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "diaApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-0418505688f7892491d1.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-3fd0371bd5981c05fdae.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aar-Debug-0defd5cd2a15db82344a.json",
+					"name" : "aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-8843ffafdcbcae6a99d0.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-139c8bc48525dac54943.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp-Debug-1f361db7c1dc56f1d251.json",
+					"name" : "diaApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_autogen-Debug-b18ce72d7adc76afbee6.json",
+					"name" : "diaApp_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_autogen_timestamp_deps-Debug-df3ac6518ac9442ff407.json",
+					"name" : "diaApp_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_copy_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_copy_apk_dependencies-Debug-3c41a2056439cca29346.json",
+					"name" : "diaApp_copy_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_make_aab-Debug-7d97e4d53612dcaeaea4.json",
+					"name" : "diaApp_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_make_aar-Debug-b45f5ce75b49ef58d414.json",
+					"name" : "diaApp_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_make_apk-Debug-5ea6f558f7e070713eb1.json",
+					"name" : "diaApp_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "diaApp_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-diaApp_prepare_apk_dir-Debug-c5705092fbbb4c278f69.json",
+					"name" : "diaApp_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-ed27d5bac09a0f6bc337.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/belka/diaApp/build/Android_Qt_6_8_2_Clang_x86_64-Debug",
+		"source" : "/home/belka/diaApp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/prefix2">
+        <file>giper.PNG</file>
+        <file>gipo.PNG</file>
+        <file>glaza.PNG</file>
+        <file>hist.PNG</file>
+        <file>hleb.PNG</file>
+        <file>sport.PNG</file>
+    </qresource>
+</RCC>

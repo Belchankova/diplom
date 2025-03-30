@@ -1,0 +1,9 @@
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/diaApp.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/install.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/diaApp_autogen_timestamp_deps.dir
+/home/belka/diaApp/build/Desktop-Debug/CMakeFiles/diaApp_autogen.dir
