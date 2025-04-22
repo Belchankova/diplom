@@ -15,6 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -23,7 +24,6 @@ QT_BEGIN_NAMESPACE
 class Ui_Theory
 {
 public:
-    QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *verticalLayout;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout;
@@ -36,18 +36,17 @@ public:
     QPushButton *TheoryXEButton;
     QPushButton *TheorySportButton;
     QSpacerItem *horizontalSpacer_2;
+    QTextBrowser *textBrowser;
     QSpacerItem *verticalSpacer_2;
 
     void setupUi(QWidget *Theory)
     {
         if (Theory->objectName().isEmpty())
             Theory->setObjectName("Theory");
-        Theory->resize(782, 484);
+        Theory->resize(782, 498);
         Theory->setStyleSheet(QString::fromUtf8("background-color: rgb(113, 121, 171);\n"
 ""));
-        horizontalLayout_2 = new QHBoxLayout(Theory);
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        verticalLayout = new QVBoxLayout();
+        verticalLayout = new QVBoxLayout(Theory);
         verticalLayout->setObjectName("verticalLayout");
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -146,13 +145,21 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
+        textBrowser = new QTextBrowser(Theory);
+        textBrowser->setObjectName("textBrowser");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy1);
+
+        verticalLayout->addWidget(textBrowser);
+
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout->addItem(verticalSpacer_2);
 
-
-        horizontalLayout_2->addLayout(verticalLayout);
-
+        textBrowser->raise();
 
         retranslateUi(Theory);
 

@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "org.qtproject.example.TempApp-debug-11:/xml_qtprovider_paths.xml.flat",
+        "source": "org.qtproject.example.TempApp-android-build-12:/xml/qtprovider_paths.xml"
+    }
+]

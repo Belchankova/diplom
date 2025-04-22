@@ -58,6 +58,7 @@ SOURCES       = ../../Diary.cpp \
 		../../Theory.cpp \
 		../../main.cpp \
 		../../mainwindow.cpp qrc_pictures.cpp \
+		qrc_textfiles.cpp \
 		moc_Diary.cpp \
 		moc_History.cpp \
 		moc_Profile.cpp \
@@ -70,6 +71,7 @@ OBJECTS       = Diary.o \
 		main.o \
 		mainwindow.o \
 		qrc_pictures.o \
+		qrc_textfiles.o \
 		moc_Diary.o \
 		moc_History.o \
 		moc_Profile.o \
@@ -488,6 +490,7 @@ Makefile: ../../TempApp.pro ../../../Qt/6.8.2/gcc_64/mkspecs/features/spec_pre.p
 		../../../Qt/6.8.2/gcc_64/mkspecs/features/lex.prf \
 		../../TempApp.pro \
 		../../pictures.qrc \
+		../../textfiles.qrc \
 		../../../Qt/6.8.2/gcc_64/lib/libQt6Widgets.prl \
 		../../../Qt/6.8.2/gcc_64/lib/libQt6Gui.prl \
 		../../../Qt/6.8.2/gcc_64/lib/libQt6Core.prl
@@ -689,6 +692,7 @@ Makefile: ../../TempApp.pro ../../../Qt/6.8.2/gcc_64/mkspecs/features/spec_pre.p
 ../../../Qt/6.8.2/gcc_64/mkspecs/features/lex.prf:
 ../../TempApp.pro:
 ../../pictures.qrc:
+../../textfiles.qrc:
 ../../../Qt/6.8.2/gcc_64/lib/libQt6Widgets.prl:
 ../../../Qt/6.8.2/gcc_64/lib/libQt6Gui.prl:
 ../../../Qt/6.8.2/gcc_64/lib/libQt6Core.prl:
@@ -706,7 +710,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../../pictures.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../../pictures.qrc ../../textfiles.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/6.8.2/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Diary.h ../../History.h ../../Profile.h ../../Theory.h ../../mainwindow.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Diary.cpp ../../History.cpp ../../Profile.cpp ../../Theory.cpp ../../main.cpp ../../mainwindow.cpp $(DISTDIR)/
@@ -734,9 +738,9 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_pictures.cpp
+compiler_rcc_make_all: qrc_pictures.cpp qrc_textfiles.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_pictures.cpp
+	-$(DEL_FILE) qrc_pictures.cpp qrc_textfiles.cpp
 qrc_pictures.cpp: ../../pictures.qrc \
 		../../../Qt/6.8.2/gcc_64/libexec/rcc \
 		../../sport.PNG \
@@ -747,6 +751,16 @@ qrc_pictures.cpp: ../../pictures.qrc \
 		../../giper.PNG \
 		../../logo.PNG
 	/home/belka/Qt/6.8.2/gcc_64/libexec/rcc -name pictures ../../pictures.qrc -o qrc_pictures.cpp
+
+qrc_textfiles.cpp: ../../textfiles.qrc \
+		../../../Qt/6.8.2/gcc_64/libexec/rcc \
+		../../TextHist.html \
+		../../TextXE.html \
+		../../TextGiper.html \
+		../../TextSport.html \
+		../../TextGlaza.html \
+		../../TextGipo.html
+	/home/belka/Qt/6.8.2/gcc_64/libexec/rcc -name textfiles ../../textfiles.qrc -o qrc_textfiles.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
@@ -1958,16 +1972,26 @@ Diary.o: ../../Diary.cpp ../../Diary.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTextBrowser \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextbrowser.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Diary.o ../../Diary.cpp
 
 History.o: ../../History.cpp ../../History.h \
@@ -2568,11 +2592,19 @@ Theory.o: ../../Theory.cpp ../../Theory.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QFormLayout \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qformlayout.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLayout \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Theory.o ../../Theory.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
@@ -2998,6 +3030,9 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 
 qrc_pictures.o: qrc_pictures.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_pictures.o qrc_pictures.cpp
+
+qrc_textfiles.o: qrc_textfiles.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_textfiles.o qrc_textfiles.cpp
 
 moc_Diary.o: moc_Diary.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Diary.o moc_Diary.cpp

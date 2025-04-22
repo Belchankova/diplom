@@ -16,6 +16,9 @@ public:
     explicit Theory(QWidget *parent = nullptr);
     ~Theory();
 
+private slots:
+    void handleButtonClicked();
+    void loadTheory(const QString &filePath);
 private:
     Ui::Theory *ui;
 };
