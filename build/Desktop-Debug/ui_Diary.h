@@ -14,7 +14,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,10 +28,10 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
-    QTextBrowser *sugar;
-    QTextBrowser *xe;
-    QTextBrowser *insulin;
-    QTextBrowser *food;
+    QTextEdit *sugar;
+    QTextEdit *he;
+    QTextEdit *insulin;
+    QTextEdit *food;
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
@@ -63,7 +63,7 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        sugar = new QTextBrowser(Diary);
+        sugar = new QTextEdit(Diary);
         sugar->setObjectName("sugar");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
         sizePolicy.setHorizontalStretch(0);
@@ -74,25 +74,23 @@ public:
         sugar->setMaximumSize(QSize(16777215, 40));
         sugar->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
 "border-radius: 20px;\n"
-""));
-        sugar->setReadOnly(false);
+"padding-top: 5px;"));
 
         verticalLayout->addWidget(sugar);
 
-        xe = new QTextBrowser(Diary);
-        xe->setObjectName("xe");
-        sizePolicy.setHeightForWidth(xe->sizePolicy().hasHeightForWidth());
-        xe->setSizePolicy(sizePolicy);
-        xe->setMinimumSize(QSize(300, 40));
-        xe->setMaximumSize(QSize(16777215, 40));
-        xe->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
+        he = new QTextEdit(Diary);
+        he->setObjectName("he");
+        sizePolicy.setHeightForWidth(he->sizePolicy().hasHeightForWidth());
+        he->setSizePolicy(sizePolicy);
+        he->setMinimumSize(QSize(300, 40));
+        he->setMaximumSize(QSize(16777215, 40));
+        he->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
 "border-radius: 20px;\n"
-""));
-        xe->setReadOnly(false);
+"padding-top: 5px;"));
 
-        verticalLayout->addWidget(xe);
+        verticalLayout->addWidget(he);
 
-        insulin = new QTextBrowser(Diary);
+        insulin = new QTextEdit(Diary);
         insulin->setObjectName("insulin");
         sizePolicy.setHeightForWidth(insulin->sizePolicy().hasHeightForWidth());
         insulin->setSizePolicy(sizePolicy);
@@ -100,12 +98,11 @@ public:
         insulin->setMaximumSize(QSize(16777215, 40));
         insulin->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
 "border-radius: 20px;\n"
-""));
-        insulin->setReadOnly(false);
+"padding-top: 5px;"));
 
         verticalLayout->addWidget(insulin);
 
-        food = new QTextBrowser(Diary);
+        food = new QTextEdit(Diary);
         food->setObjectName("food");
         sizePolicy.setHeightForWidth(food->sizePolicy().hasHeightForWidth());
         food->setSizePolicy(sizePolicy);
@@ -113,8 +110,7 @@ public:
         food->setMaximumSize(QSize(16777215, 40));
         food->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
 "border-radius: 20px;\n"
-""));
-        food->setReadOnly(false);
+"padding-top: 5px;"));
 
         verticalLayout->addWidget(food);
 
@@ -201,14 +197,10 @@ public:
     void retranslateUi(QWidget *Diary)
     {
         Diary->setWindowTitle(QCoreApplication::translate("Diary", "Form", nullptr));
-        sugar->setHtml(QCoreApplication::translate("Diary", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Ubuntu Sans'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        sugar->setPlaceholderText(QCoreApplication::translate("Diary", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\203\321\200\320\276\320\262\320\265\320\275\321\214 \320\263\320\273\321\216\320\272\320\276\320\267\321\213", nullptr));
+        he->setPlaceholderText(QCoreApplication::translate("Diary", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\245\320\225", nullptr));
+        insulin->setPlaceholderText(QCoreApplication::translate("Diary", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\270\320\275\321\201\321\203\320\273\320\270\320\275\320\260", nullptr));
+        food->setPlaceholderText(QCoreApplication::translate("Diary", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\203\320\277\320\276\321\202\321\200\320\265\320\261\320\273\321\217\320\265\320\274\321\213\320\265 \320\277\321\200\320\276\320\264\321\203\320\272\321\202\321\213", nullptr));
         save->setText(QCoreApplication::translate("Diary", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 

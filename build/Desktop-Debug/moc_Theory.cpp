@@ -40,8 +40,7 @@ static constexpr auto qt_meta_stringdata_ZN6TheoryE = QtMocHelpers::stringData(
     "Theory",
     "handleButtonClicked",
     "",
-    "loadTheory",
-    "filePath"
+    "openMenu"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -62,11 +61,11 @@ Q_CONSTINIT static const uint qt_meta_data_ZN6TheoryE[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    1,   27,    2, 0x08,    2 /* Private */,
+       3,    0,   27,    2, 0x08,    2 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -82,9 +81,8 @@ Q_CONSTINIT const QMetaObject Theory::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Theory, std::true_type>,
         // method 'handleButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'loadTheory'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+        // method 'openMenu'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -95,10 +93,11 @@ void Theory::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->handleButtonClicked(); break;
-        case 1: _t->loadTheory((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->openMenu(); break;
         default: ;
         }
     }
+    (void)_a;
 }
 
 const QMetaObject *Theory::metaObject() const

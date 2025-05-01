@@ -12,10 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
-#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -25,42 +24,41 @@ class Ui_Theory
 {
 public:
     QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QFormLayout *formLayout;
+    QStackedWidget *stackedWidget;
+    QWidget *menuPage;
+    QVBoxLayout *verticalLayout_2;
+    QFrame *frame_2;
+    QFormLayout *formLayout_3;
     QPushButton *TheoryHistButton;
-    QPushButton *TheoryGipoButton;
     QPushButton *TheoryGiperButton;
     QPushButton *TheoryGlazaButton;
     QPushButton *TheoryXEButton;
     QPushButton *TheorySportButton;
-    QSpacerItem *horizontalSpacer_2;
-    QTextBrowser *textBrowser;
-    QSpacerItem *verticalSpacer_2;
+    QPushButton *TheoryGipoButton;
 
     void setupUi(QWidget *Theory)
     {
         if (Theory->objectName().isEmpty())
             Theory->setObjectName("Theory");
-        Theory->resize(782, 498);
+        Theory->resize(782, 986);
         Theory->setStyleSheet(QString::fromUtf8("background-color: rgb(113, 121, 171);\n"
 ""));
         verticalLayout = new QVBoxLayout(Theory);
         verticalLayout->setObjectName("verticalLayout");
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        formLayout = new QFormLayout();
-        formLayout->setObjectName("formLayout");
-        TheoryHistButton = new QPushButton(Theory);
+        stackedWidget = new QStackedWidget(Theory);
+        stackedWidget->setObjectName("stackedWidget");
+        menuPage = new QWidget();
+        menuPage->setObjectName("menuPage");
+        verticalLayout_2 = new QVBoxLayout(menuPage);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        frame_2 = new QFrame(menuPage);
+        frame_2->setObjectName("frame_2");
+        frame_2->setStyleSheet(QString::fromUtf8("border:none;"));
+        frame_2->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Shadow::Raised);
+        formLayout_3 = new QFormLayout(frame_2);
+        formLayout_3->setObjectName("formLayout_3");
+        TheoryHistButton = new QPushButton(frame_2);
         TheoryHistButton->setObjectName("TheoryHistButton");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -73,21 +71,9 @@ public:
 "border-radius: 20px;\n"
 "background-image: url(:/new/prefix1/hist.PNG);"));
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, TheoryHistButton);
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, TheoryHistButton);
 
-        TheoryGipoButton = new QPushButton(Theory);
-        TheoryGipoButton->setObjectName("TheoryGipoButton");
-        sizePolicy.setHeightForWidth(TheoryGipoButton->sizePolicy().hasHeightForWidth());
-        TheoryGipoButton->setSizePolicy(sizePolicy);
-        TheoryGipoButton->setMinimumSize(QSize(150, 150));
-        TheoryGipoButton->setMaximumSize(QSize(150, 150));
-        TheoryGipoButton->setStyleSheet(QString::fromUtf8("\n"
-"border-radius: 20px;\n"
-"background-image: url(:/new/prefix1/gipo.PNG);"));
-
-        formLayout->setWidget(0, QFormLayout::FieldRole, TheoryGipoButton);
-
-        TheoryGiperButton = new QPushButton(Theory);
+        TheoryGiperButton = new QPushButton(frame_2);
         TheoryGiperButton->setObjectName("TheoryGiperButton");
         sizePolicy.setHeightForWidth(TheoryGiperButton->sizePolicy().hasHeightForWidth());
         TheoryGiperButton->setSizePolicy(sizePolicy);
@@ -97,9 +83,9 @@ public:
 "border-radius: 20px;\n"
 "background-image: url(:/new/prefix1/giper.PNG);"));
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, TheoryGiperButton);
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, TheoryGiperButton);
 
-        TheoryGlazaButton = new QPushButton(Theory);
+        TheoryGlazaButton = new QPushButton(frame_2);
         TheoryGlazaButton->setObjectName("TheoryGlazaButton");
         sizePolicy.setHeightForWidth(TheoryGlazaButton->sizePolicy().hasHeightForWidth());
         TheoryGlazaButton->setSizePolicy(sizePolicy);
@@ -109,9 +95,9 @@ public:
 "border-radius: 20px;\n"
 "background-image: url(:/new/prefix1/glaza.PNG);"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, TheoryGlazaButton);
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, TheoryGlazaButton);
 
-        TheoryXEButton = new QPushButton(Theory);
+        TheoryXEButton = new QPushButton(frame_2);
         TheoryXEButton->setObjectName("TheoryXEButton");
         sizePolicy.setHeightForWidth(TheoryXEButton->sizePolicy().hasHeightForWidth());
         TheoryXEButton->setSizePolicy(sizePolicy);
@@ -121,9 +107,9 @@ public:
 "border-radius: 20px;\n"
 "background-image: url(:/new/prefix1/hleb.PNG);"));
 
-        formLayout->setWidget(2, QFormLayout::LabelRole, TheoryXEButton);
+        formLayout_3->setWidget(2, QFormLayout::LabelRole, TheoryXEButton);
 
-        TheorySportButton = new QPushButton(Theory);
+        TheorySportButton = new QPushButton(frame_2);
         TheorySportButton->setObjectName("TheorySportButton");
         sizePolicy.setHeightForWidth(TheorySportButton->sizePolicy().hasHeightForWidth());
         TheorySportButton->setSizePolicy(sizePolicy);
@@ -133,33 +119,27 @@ public:
 "border-radius: 20px;\n"
 "background-image: url(:/new/prefix1/sport.PNG);"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, TheorySportButton);
+        formLayout_3->setWidget(2, QFormLayout::FieldRole, TheorySportButton);
+
+        TheoryGipoButton = new QPushButton(frame_2);
+        TheoryGipoButton->setObjectName("TheoryGipoButton");
+        sizePolicy.setHeightForWidth(TheoryGipoButton->sizePolicy().hasHeightForWidth());
+        TheoryGipoButton->setSizePolicy(sizePolicy);
+        TheoryGipoButton->setMinimumSize(QSize(150, 150));
+        TheoryGipoButton->setMaximumSize(QSize(150, 150));
+        TheoryGipoButton->setStyleSheet(QString::fromUtf8("\n"
+"border-radius: 20px;\n"
+"background-image: url(:/new/prefix1/gipo.PNG);"));
+
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, TheoryGipoButton);
 
 
-        horizontalLayout->addLayout(formLayout);
+        verticalLayout_2->addWidget(frame_2, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        stackedWidget->addWidget(menuPage);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        verticalLayout->addWidget(stackedWidget);
 
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        textBrowser = new QTextBrowser(Theory);
-        textBrowser->setObjectName("textBrowser");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
-        textBrowser->setSizePolicy(sizePolicy1);
-
-        verticalLayout->addWidget(textBrowser);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_2);
-
-        textBrowser->raise();
 
         retranslateUi(Theory);
 
@@ -170,11 +150,11 @@ public:
     {
         Theory->setWindowTitle(QCoreApplication::translate("Theory", "Form", nullptr));
         TheoryHistButton->setText(QString());
-        TheoryGipoButton->setText(QString());
         TheoryGiperButton->setText(QString());
         TheoryGlazaButton->setText(QString());
         TheoryXEButton->setText(QString());
         TheorySportButton->setText(QString());
+        TheoryGipoButton->setText(QString());
     } // retranslateUi
 
 };

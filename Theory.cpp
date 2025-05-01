@@ -1,46 +1,72 @@
 #include "Theory.h"
 #include "ui_Theory.h"
+
 #include <QFile>
 #include <QIODevice>
 
-Theory::Theory(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Theory)
-{ui->setupUi(this);
-    connect(ui->TheoryHistButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
-    connect(ui->TheoryGipoButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
-    connect(ui->TheoryGiperButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+#include "lessonwidget.h"
 
+
+Theory::Theory(QWidget *parent) : QWidget(parent), ui(new Ui::Theory) {
+    ui->setupUi(this);
+
+    loadLessons();
 }
 
-Theory::~Theory()
-{
+Theory::~Theory() {
     delete ui;
 }
-void Theory::loadTheory(const QString &filePath)
-{
-    QFile file(filePath);
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream in(&file);
-        QString content = in.readAll();
-        ui->textBrowser->setHtml(content);  // <<< Вот здесь используется textBrowser
-        file.close();
-    } else {
-        ui->textBrowser->setText("Не удалось загрузить файл: " + filePath);
-    }
+
+void Theory::loadLessons() {
+    auto histPage = new LessonWidget(":/new/prefix2/TextHist.html");
+    connect(histPage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(histPage);
+    lessons.insert(ui->TheoryHistButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheoryHistButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+
+    auto gipoPage = new LessonWidget(":/new/prefix2/TextGipo.html");
+    connect(gipoPage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(gipoPage);
+    lessons.insert(ui->TheoryGipoButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheoryGipoButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+
+    auto giperPage = new LessonWidget(":/new/prefix2/TextGiper.html");
+    connect(giperPage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(giperPage);
+    lessons.insert(ui->TheoryGiperButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheoryGiperButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+
+    auto xePage = new LessonWidget(":/new/prefix2/TextXE.html");
+    connect(xePage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(xePage);
+    lessons.insert(ui->TheoryXEButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheoryXEButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+
+    auto glazaPage = new LessonWidget(":/new/prefix2/TextGlaza.html");
+    connect(glazaPage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(glazaPage);
+    lessons.insert(ui->TheoryGlazaButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheoryGlazaButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
+
+    auto sportPage = new LessonWidget(":/new/prefix2/TextSport.html");
+    connect(sportPage, &LessonWidget::backButtonClicked, this, &Theory::openMenu); // обработка нажатия кнопки назад в окне урока
+    ui->stackedWidget->addWidget(sportPage);
+    lessons.insert(ui->TheorySportButton, ui->stackedWidget->count() - 1);
+    connect(ui->TheorySportButton, &QPushButton::clicked, this, &Theory::handleButtonClicked);
 }
-void Theory::handleButtonClicked()
-{
+
+void Theory::handleButtonClicked() {
     QPushButton *button = qobject_cast<QPushButton*>(sender());
     if (!button) return;
 
-    QString filePath;
-    if (button == ui->TheoryHistButton)
-        filePath = ":/new/prefix2/TextHist.html";
-    else if (button == ui->TheoryGipoButton)
-        filePath = ":/new/prefix2/TextGipo.html";
-    else if (button == ui->TheoryGiperButton)
-        filePath = ":/new/prefix2/TextGiper.html";
+    for (auto [key, value] : lessons.asKeyValueRange()) {
+        if (button == key) {
+            ui->stackedWidget->setCurrentIndex(value);
+            break;
+        }
+    }
+}
 
-    loadTheory(filePath);
+void Theory::openMenu() {
+    ui->stackedWidget->setCurrentIndex(0);
 }

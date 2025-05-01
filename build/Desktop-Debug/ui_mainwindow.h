@@ -122,7 +122,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "DiaBelka", nullptr));
         openDiaryButton->setText(QCoreApplication::translate("MainWindow", "\320\224\320\275\320\265\320\262\320\275\320\270\320\272", nullptr));
         openHistoryButton->setText(QCoreApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217", nullptr));
         openTheoryButton->setText(QCoreApplication::translate("MainWindow", "\320\242\320\265\320\276\321\200\320\270\321\217", nullptr));
