@@ -2409,16 +2409,40 @@ History.o: ../../History.cpp ../../History.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHeaderView \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTableWidget \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtablewidget.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtableview.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlQuery \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsql-config.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlexports.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqldatabase.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlError \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlerror.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlRecord \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlrecord.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTableWidgetItem \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o History.o ../../History.cpp
 
 Profile.o: ../../Profile.cpp ../../Profile.h \
@@ -3239,6 +3263,8 @@ main.o: ../../main.cpp ../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfile.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfileinfo.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlError \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlerror.h \
 		../../mainwindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \

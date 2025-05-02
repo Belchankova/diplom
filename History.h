@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::History *ui;
+    void loadHistory();
+    void buildSugarChart();
 };
 
 #endif // HISTORY_H
