@@ -1,9 +1,11 @@
 #include "Diary.h"
 #include "ui_Diary.h"
+#include "LoginWindow.h"
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
 #include <QMessageBox>
+#include <QDateTime>
 
     Diary::Diary(QWidget *parent) :
     QWidget(parent),
@@ -13,13 +15,7 @@
 
     connect(ui->save, &QPushButton::clicked, this, &Diary::saveEntry);
 
-    QSqlQuery query("SELECT sugar, he, insulin, food FROM diary_entries ORDER BY created_at DESC LIMIT 1");
-    if (query.next()) {
-        ui->sugar->setPlainText(query.value(0).toString());
-        ui->he->setPlainText(query.value(1).toString());
-        ui->insulin->setPlainText(query.value(2).toString());
-        ui->food->setPlainText(query.value(3).toString());
-    }
+
 }
 
 Diary::~Diary()
@@ -33,23 +29,30 @@ void Diary::saveEntry()
     double he = ui->he->toPlainText().toDouble();
     double insulin = ui->insulin->toPlainText().toDouble();
     QString food = ui->food->toPlainText();
+    QString timestamp = QDateTime::currentDateTime().toString(Qt::ISODate);
 
     QSqlQuery query;
-    query.prepare("INSERT INTO diary_entries (sugar, he, insulin, food) "
-                  "VALUES (:sugar, :he, :insulin, :food)");
+    query.prepare("INSERT INTO diary_entries (created_at, sugar, he, insulin, food, username) "
+                  "VALUES (:created_at, :sugar, :he, :insulin, :food, :username)");
+    query.bindValue(":created_at", timestamp);
     query.bindValue(":sugar", sugar);
     query.bindValue(":he", he);
     query.bindValue(":insulin", insulin);
     query.bindValue(":food", food);
+    query.bindValue(":username", LoginWindow::currentUsername());
 
-    if (!query.exec()) {
-        QMessageBox::critical(this, "Ошибка", "Не удалось сохранить запись.");
+    bool success = query.exec();
+
+    if (!success) {
+        QMessageBox::critical(this, "Упс...", "Не удалось сохранить запись.");
         qDebug() << "SQL Error:" << query.lastError().text();
     } else {
-        QMessageBox::information(this, "Успех", "Запись сохранена.");
+        QMessageBox::information(this, "Классно!", "Запись сохранена.");
         ui->sugar->clear();
         ui->he->clear();
         ui->insulin->clear();
         ui->food->clear();
+        emit entrySaved();
     }
 }
+

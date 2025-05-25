@@ -18,6 +18,10 @@ public:
 private slots:
     void saveEntry();
 
+signals:
+    void entrySaved();
+
+
 private:
     Ui::Diary *ui;
 };

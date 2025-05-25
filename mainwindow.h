@@ -9,6 +9,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -18,6 +19,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    explicit MainWindow(const QString &username, QWidget *parent = nullptr);
+
 
 private:
     Ui::MainWindow *ui;

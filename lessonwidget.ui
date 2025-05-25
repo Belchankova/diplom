@@ -63,14 +63,14 @@
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">
+           <string notr="true">image: url(:/new/prefix3/Untitled_design-removebg-preview.png);
 background-color: rgb(255, 120, 0);
 border-radius: 10px;
 pressed: rgb(255, 163, 72);
 </string>
           </property>
           <property name="text">
-           <string>Назад</string>
+           <string/>
           </property>
          </widget>
         </item>

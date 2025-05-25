@@ -72,6 +72,7 @@ public:
         sugar->setSizePolicy(sizePolicy);
         sugar->setMinimumSize(QSize(300, 40));
         sugar->setMaximumSize(QSize(16777215, 40));
+        sugar->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::ArrowCursor)));
         sugar->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);\n"
 "border-radius: 20px;\n"
 "padding-top: 5px;"));
@@ -137,7 +138,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(save->sizePolicy().hasHeightForWidth());
         save->setSizePolicy(sizePolicy1);
-        save->setStyleSheet(QString::fromUtf8("QPushButton{ background-color: rgb(76, 175, 80);\n"
+        save->setStyleSheet(QString::fromUtf8("/*QPushButton{ background-color: rgb(76, 175, 80);\n"
 "color: white;\n"
 "border: none;\n"
 "border-radius: 8px;\n"
@@ -147,7 +148,9 @@ public:
 "	background-color: rgb(69, 160, 73);}\n"
 "QPushButton: pressed {\n"
 "	background-color: rgb(62, 142, 65);}\n"
-""));
+"text-align: center;*/\n"
+"QPushButton{ background-color: rgb(76, 175, 80);\n"
+"color: black;}"));
 
         horizontalLayout_2->addWidget(save);
 
@@ -173,7 +176,7 @@ public:
         logo->setSizePolicy(sizePolicy2);
         logo->setMinimumSize(QSize(300, 100));
         logo->setStyleSheet(QString::fromUtf8("\n"
-"image: url(:/new/prefix1/logo.PNG);"));
+"image: url(:/new/prefix3/IMG_4398-removebg-preview.png);"));
 
         horizontalLayout_3->addWidget(logo);
 

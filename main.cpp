@@ -5,6 +5,7 @@
 #include <QStandardPaths>
 #include <QDir>
 #include <QSqlError>
+#include "LoginWindow.h"
 #include "mainwindow.h"
 
 void connectToDatabase() {
@@ -32,15 +33,32 @@ void connectToDatabase() {
                "insulin INTEGER, "
                "food TEXT, "
                "created_at DATETIME DEFAULT CURRENT_TIMESTAMP)");
-    qDebug() << "Ошибка создания базе данных:" << db.lastError().text();
+    qDebug() << "Ошибка создания базы данных:" << db.lastError().text();
 }
+void connectUserDatabase() {
+    QSqlDatabase userDb = QSqlDatabase::addDatabase("QSQLITE", "UserConnection");
+    QString userDbPath = QCoreApplication::applicationDirPath() + "/users.db";
+    userDb.setDatabaseName(userDbPath);
+
+    if (!userDb.open()) {
+        qDebug() << "Ошибка открытия БД пользователей:" << userDb.lastError().text();
+        return;
+    }
+
+    QSqlQuery query(userDb);
+    query.exec("CREATE TABLE IF NOT EXISTS users ("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+               "username TEXT UNIQUE, "
+               "password_hash TEXT)");
+}
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     connectToDatabase();
-    MainWindow w;
-    w.setMinimumSize(480, 640);
-    w.show();
+     connectUserDatabase();
+    LoginWindow login;
+    login.show();
     return a.exec();
 }

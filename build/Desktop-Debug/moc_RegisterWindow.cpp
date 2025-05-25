@@ -1,12 +1,12 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'Diary.h'
+** Meta object code from reading C++ file 'RegisterWindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.8.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Diary.h"
+#include "../../RegisterWindow.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -16,7 +16,7 @@
 
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'Diary.h' doesn't include <QObject>."
+#error "The header file 'RegisterWindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.8.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -31,22 +31,22 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
-struct qt_meta_tag_ZN5DiaryE_t {};
+struct qt_meta_tag_ZN14RegisterWindowE_t {};
 } // unnamed namespace
 
 
 #ifdef QT_MOC_HAS_STRINGDATA
-static constexpr auto qt_meta_stringdata_ZN5DiaryE = QtMocHelpers::stringData(
-    "Diary",
-    "entrySaved",
+static constexpr auto qt_meta_stringdata_ZN14RegisterWindowE = QtMocHelpers::stringData(
+    "RegisterWindow",
+    "registrationSuccessful",
     "",
-    "saveEntry"
+    "on_registerButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
 #endif // !QT_MOC_HAS_STRINGDATA
 
-Q_CONSTINIT static const uint qt_meta_data_ZN5DiaryE[] = {
+Q_CONSTINIT static const uint qt_meta_data_ZN14RegisterWindowE[] = {
 
  // content:
       12,       // revision
@@ -74,38 +74,38 @@ Q_CONSTINIT static const uint qt_meta_data_ZN5DiaryE[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject Diary::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject RegisterWindow::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_ZN5DiaryE.offsetsAndSizes,
-    qt_meta_data_ZN5DiaryE,
+    qt_meta_stringdata_ZN14RegisterWindowE.offsetsAndSizes,
+    qt_meta_data_ZN14RegisterWindowE,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_tag_ZN5DiaryE_t,
+    qt_incomplete_metaTypeArray<qt_meta_tag_ZN14RegisterWindowE_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<Diary, std::true_type>,
-        // method 'entrySaved'
+        QtPrivate::TypeAndForceComplete<RegisterWindow, std::true_type>,
+        // method 'registrationSuccessful'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'saveEntry'
+        // method 'on_registerButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
 
-void Diary::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void RegisterWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    auto *_t = static_cast<Diary *>(_o);
+    auto *_t = static_cast<RegisterWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->entrySaved(); break;
-        case 1: _t->saveEntry(); break;
+        case 0: _t->registrationSuccessful(); break;
+        case 1: _t->on_registerButton_clicked(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _q_method_type = void (Diary::*)();
-            if (_q_method_type _q_method = &Diary::entrySaved; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (RegisterWindow::*)();
+            if (_q_method_type _q_method = &RegisterWindow::registrationSuccessful; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -113,20 +113,20 @@ void Diary::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     }
 }
 
-const QMetaObject *Diary::metaObject() const
+const QMetaObject *RegisterWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Diary::qt_metacast(const char *_clname)
+void *RegisterWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_ZN5DiaryE.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_ZN14RegisterWindowE.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int Diary::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int RegisterWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -145,7 +145,7 @@ int Diary::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Diary::entrySaved()
+void RegisterWindow::registrationSuccessful()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }

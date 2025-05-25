@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix3">
+        <file>IMG_4398-removebg-preview.png</file>
+        <file>IMG_4402.PNG</file>
+        <file>Untitled_design-removebg-preview.png</file>
+    </qresource>
+</RCC>

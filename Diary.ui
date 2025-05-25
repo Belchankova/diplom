@@ -73,6 +73,9 @@
            <height>40</height>
           </size>
          </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(246, 245, 244);
 border-radius: 20px;
@@ -220,7 +223,7 @@ padding-top: 5px;</string>
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">QPushButton{ background-color: rgb(76, 175, 80);
+        <string notr="true">/*QPushButton{ background-color: rgb(76, 175, 80);
 color: white;
 border: none;
 border-radius: 8px;
@@ -230,7 +233,9 @@ QPushButton: hover {
 	background-color: rgb(69, 160, 73);}
 QPushButton: pressed {
 	background-color: rgb(62, 142, 65);}
-</string>
+text-align: center;*/
+QPushButton{ background-color: rgb(76, 175, 80);
+color: black;}</string>
        </property>
        <property name="text">
         <string>Сохранить</string>
@@ -286,7 +291,7 @@ QPushButton: pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">
-image: url(:/new/prefix1/logo.PNG);</string>
+image: url(:/new/prefix3/IMG_4398-removebg-preview.png);</string>
        </property>
       </widget>
      </item>

@@ -11,13 +11,14 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "QtCharts/QChartView"
 
 QT_BEGIN_NAMESPACE
 
@@ -28,8 +29,13 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
-    QGraphicsView *graphicsView;
+    QChartView
+ *chartView;
     QTableWidget *diaryList;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *deleteButton;
+    QSpacerItem *horizontalSpacer_4;
     QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QWidget *History)
@@ -48,17 +54,18 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        graphicsView = new QGraphicsView(History);
-        graphicsView->setObjectName("graphicsView");
+        chartView = new QChartView
+(History);
+        chartView->setObjectName("chartView");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(graphicsView->sizePolicy().hasHeightForWidth());
-        graphicsView->setSizePolicy(sizePolicy);
-        graphicsView->setMinimumSize(QSize(0, 0));
-        graphicsView->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);"));
+        sizePolicy.setHeightForWidth(chartView->sizePolicy().hasHeightForWidth());
+        chartView->setSizePolicy(sizePolicy);
+        chartView->setMinimumSize(QSize(0, 0));
+        chartView->setStyleSheet(QString::fromUtf8("background-color: rgb(246, 245, 244);"));
 
-        verticalLayout->addWidget(graphicsView);
+        verticalLayout->addWidget(chartView);
 
         diaryList = new QTableWidget(History);
         diaryList->setObjectName("diaryList");
@@ -71,6 +78,30 @@ public:
         diaryList->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(diaryList);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
+        deleteButton = new QPushButton(History);
+        deleteButton->setObjectName("deleteButton");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(deleteButton->sizePolicy().hasHeightForWidth());
+        deleteButton->setSizePolicy(sizePolicy2);
+        deleteButton->setStyleSheet(QString::fromUtf8("background-color: rgb(224, 27, 36);"));
+
+        horizontalLayout_2->addWidget(deleteButton);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
 
         horizontalLayout->addLayout(verticalLayout);
@@ -91,6 +122,7 @@ public:
     void retranslateUi(QWidget *History)
     {
         History->setWindowTitle(QCoreApplication::translate("History", "Form", nullptr));
+        deleteButton->setText(QCoreApplication::translate("History", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
 };

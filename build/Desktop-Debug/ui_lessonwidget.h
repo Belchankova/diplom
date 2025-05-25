@@ -67,7 +67,7 @@ public:
         sizePolicy.setHeightForWidth(backPushButton->sizePolicy().hasHeightForWidth());
         backPushButton->setSizePolicy(sizePolicy);
         backPushButton->setMinimumSize(QSize(60, 30));
-        backPushButton->setStyleSheet(QString::fromUtf8("\n"
+        backPushButton->setStyleSheet(QString::fromUtf8("image: url(:/new/prefix3/Untitled_design-removebg-preview.png);\n"
 "background-color: rgb(255, 120, 0);\n"
 "border-radius: 10px;\n"
 "pressed: rgb(255, 163, 72);\n"
@@ -94,7 +94,7 @@ public:
     void retranslateUi(QWidget *LessonWidget)
     {
         LessonWidget->setWindowTitle(QCoreApplication::translate("LessonWidget", "Form", nullptr));
-        backPushButton->setText(QCoreApplication::translate("LessonWidget", "\320\235\320\260\320\267\320\260\320\264", nullptr));
+        backPushButton->setText(QString());
     } // retranslateUi
 
 };

@@ -1,7 +1,6 @@
 #ifndef PROFILE_H
 #define PROFILE_H
 
-
 #include <QWidget>
 
 namespace Ui {
@@ -16,8 +15,17 @@ public:
     explicit Profile(QWidget *parent = nullptr);
     ~Profile();
 
+    void setUsername(const QString &username); // Устанавливаем логин
+
+private slots:
+    void on_changePasswordButton_clicked(); // Обработка смены пароля
+
 private:
     Ui::Profile *ui;
+    QString currentUsername;
+
+    QString hashPassword(const QString &password);
 };
 
 #endif // PROFILE_H
+
