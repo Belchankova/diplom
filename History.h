@@ -2,12 +2,6 @@
 #define HISTORY_H
 
 #include <QWidget>
-#include <QtCharts/QChartView>
-#include <QtCharts/QLineSeries>
-#include <QtCharts/QChart>
-#include <QtCharts/QValueAxis>
-#include <QtCharts/QDateTimeAxis>
-//using namespace QtCharts;
 
 namespace Ui {
 class History;
@@ -24,13 +18,10 @@ public:
 public slots:
     void reload();
 
-
 private:
     Ui::History *ui;
     void loadHistory();
-    void buildSugarChart();
-    void onDeleteClicked();
-
+    void buildSugarChart(int userId);
 };
 
 #endif // HISTORY_H

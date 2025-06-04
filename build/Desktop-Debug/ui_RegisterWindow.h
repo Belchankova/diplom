@@ -16,7 +16,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -34,8 +33,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
-    QTextEdit *loginRegister;
-    QTextEdit *passwordRegister;
+    QLineEdit *loginRegister;
+    QLineEdit *passwordRegister;
     QLineEdit *confirmPasswordRegister;
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
@@ -100,7 +99,7 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        loginRegister = new QTextEdit(RegisterWindow);
+        loginRegister = new QLineEdit(RegisterWindow);
         loginRegister->setObjectName("loginRegister");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
@@ -111,12 +110,11 @@ public:
         loginRegister->setMaximumSize(QSize(16777215, 40));
         loginRegister->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"padding-top: 5px;\n"
 ""));
 
         verticalLayout->addWidget(loginRegister);
 
-        passwordRegister = new QTextEdit(RegisterWindow);
+        passwordRegister = new QLineEdit(RegisterWindow);
         passwordRegister->setObjectName("passwordRegister");
         sizePolicy1.setHeightForWidth(passwordRegister->sizePolicy().hasHeightForWidth());
         passwordRegister->setSizePolicy(sizePolicy1);
@@ -124,7 +122,7 @@ public:
         passwordRegister->setMaximumSize(QSize(16777215, 40));
         passwordRegister->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"padding-top: 5px;"));
+""));
 
         verticalLayout->addWidget(passwordRegister);
 

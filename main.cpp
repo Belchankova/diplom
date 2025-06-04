@@ -6,17 +6,10 @@
 #include <QDir>
 #include <QSqlError>
 #include "LoginWindow.h"
-#include "mainwindow.h"
 
 void connectToDatabase() {
+    QString dbPath = QCoreApplication::applicationDirPath() + "/app.db";
 
-    QString appDirPath = QCoreApplication::applicationDirPath();
-    QDir dir(appDirPath);
-    if (!dir.exists()) {
-        dir.mkpath(appDirPath);
-    }
-
-    QString dbPath = appDirPath + "/diary.db";
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(dbPath);
 
@@ -26,39 +19,38 @@ void connectToDatabase() {
     }
 
     QSqlQuery query;
-    query.exec("CREATE TABLE IF NOT EXISTS diary_entries ("
-               "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-               "sugar INTEGER, "
-               "he INTEGER, "
-               "insulin INTEGER, "
-               "food TEXT, "
-               "created_at DATETIME DEFAULT CURRENT_TIMESTAMP)");
-    qDebug() << "Ошибка создания базы данных:" << db.lastError().text();
-}
-void connectUserDatabase() {
-    QSqlDatabase userDb = QSqlDatabase::addDatabase("QSQLITE", "UserConnection");
-    QString userDbPath = QCoreApplication::applicationDirPath() + "/users.db";
-    userDb.setDatabaseName(userDbPath);
 
-    if (!userDb.open()) {
-        qDebug() << "Ошибка открытия БД пользователей:" << userDb.lastError().text();
-        return;
+    // Создание таблицы пользователей
+    if (!query.exec(
+            "CREATE TABLE IF NOT EXISTS users ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "username TEXT UNIQUE, "
+            "password_hash TEXT)")) {
+        qDebug() << "Ошибка создания таблицы users:" << query.lastError().text();
     }
 
-    QSqlQuery query(userDb);
-    query.exec("CREATE TABLE IF NOT EXISTS users ("
-               "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-               "username TEXT UNIQUE, "
-               "password_hash TEXT)");
+    // Создание таблицы записей
+    if (!query.exec(
+            "CREATE TABLE IF NOT EXISTS diary_entries ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "sugar REAL, "
+            "he REAL, "
+            "insulin REAL, "
+            "food TEXT, "
+            "created_at DATETIME DEFAULT CURRENT_TIMESTAMP, "
+            "user_id INTEGER, "
+            "FOREIGN KEY(user_id) REFERENCES users(id))")) {
+        qDebug() << "Ошибка создания таблицы diary_entries:" << query.lastError().text();
+    }
 }
-
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     connectToDatabase();
-     connectUserDatabase();
+
     LoginWindow login;
     login.show();
+
     return a.exec();
 }

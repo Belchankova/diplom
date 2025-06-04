@@ -55,7 +55,7 @@
      <item>
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="0">
-        <widget class="QTextEdit" name="login">
+        <widget class="QLineEdit" name="loginEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -70,17 +70,14 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>16777215</width>
+           <width>16777214</width>
            <height>40</height>
           </size>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 10px;
-padding-top: 5px;</string>
-         </property>
-         <property name="tabChangesFocus">
-          <bool>false</bool>
+</string>
          </property>
          <property name="placeholderText">
           <string>Введите имя пользователя</string>
@@ -88,7 +85,7 @@ padding-top: 5px;</string>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QWidget" name="widget_2" native="true">
+        <widget class="QWidget" name="widget_3" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -98,7 +95,7 @@ padding-top: 5px;</string>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLineEdit" name="password">
+        <widget class="QLineEdit" name="passwordEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -130,6 +127,22 @@ border-radius: 10px;
          </property>
         </widget>
        </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pokazat">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/new/prefix1/Изображения/диплом фотки/eye.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -149,6 +162,16 @@ border-radius: 10px;
       </spacer>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

@@ -798,7 +798,8 @@ qrc_pictures.cpp: ../../pictures.qrc \
 		../../hleb.PNG \
 		../../gipo.PNG \
 		../../giper.PNG \
-		../../logo.PNG
+		../../logo.PNG \
+		../../../Изображения/диплом\ фотки/eye.png
 	/home/belka/Qt/6.8.2/gcc_64/libexec/rcc -name pictures ../../pictures.qrc -o qrc_pictures.cpp
 
 qrc_textfiles.cpp: ../../textfiles.qrc \
@@ -1202,48 +1203,6 @@ moc_History.cpp: ../../History.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QPen \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QFont \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QAbstractSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qabstractseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChart \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QLegend \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qlegend.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsWidget \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpainterpath.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QBrush \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QMargins \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QLineSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qlineseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QXYSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qxyseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QImage \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QValueAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qvalueaxis.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QDateTimeAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qdatetimeaxis.h \
 		moc_predefs.h \
 		../../../Qt/6.8.2/gcc_64/libexec/moc
 	/home/belka/Qt/6.8.2/gcc_64/libexec/moc $(DEFINES) --include /home/belka/TempApp/build/Desktop-Debug/moc_predefs.h -I/home/belka/Qt/6.8.2/gcc_64/mkspecs/linux-clang -I/home/belka/TempApp -I/home/belka/Qt/6.8.2/gcc_64/include -I/home/belka/Qt/6.8.2/gcc_64/include/QtCharts -I/home/belka/Qt/6.8.2/gcc_64/include/QtOpenGLWidgets -I/home/belka/Qt/6.8.2/gcc_64/include/QtWidgets -I/home/belka/Qt/6.8.2/gcc_64/include/QtOpenGL -I/home/belka/Qt/6.8.2/gcc_64/include/QtGui -I/home/belka/Qt/6.8.2/gcc_64/include/QtSql -I/home/belka/Qt/6.8.2/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../History.h -o moc_History.cpp
@@ -2665,28 +2624,16 @@ Diary.o: ../../Diary.cpp ../../Diary.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		ui_Diary.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
+		../../LoginWindow.h \
+		../../RegisterWindow.h \
+		../../mainwindow.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QMap \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTextEdit \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlQuery \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlquery.h \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
@@ -2700,7 +2647,10 @@ Diary.o: ../../Diary.cpp ../../Diary.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMessageBox \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QDateTime \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qcalendar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Diary.o ../../Diary.cpp
 
 History.o: ../../History.cpp ../../History.h \
@@ -2892,6 +2842,45 @@ History.o: ../../History.cpp ../../History.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+		ui_History.h \
+		../../LoginWindow.h \
+		../../RegisterWindow.h \
+		../../mainwindow.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QMap \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlQuery \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlquery.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsql-config.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlexports.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqldatabase.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlError \
+		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlerror.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTableWidgetItem \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtablewidget.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtableview.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/6.8.2/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
@@ -2922,8 +2911,6 @@ History.o: ../../History.cpp ../../History.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/qlineseries.h \
@@ -2934,48 +2921,6 @@ History.o: ../../History.cpp ../../History.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/qvalueaxis.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt/6.8.2/gcc_64/include/QtCharts/qdatetimeaxis.h \
-		ui_History.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHeaderView \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qvalidator.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/qregularexpression.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qslider.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstyle.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTableWidget \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtablewidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtableview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlQuery \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlquery.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsql-config.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlexports.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqldatabase.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/qmetaobject.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlError \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlerror.h \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlRecord \
-		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlrecord.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTableWidgetItem \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QDateTime \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qdatetime.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qcalendar.h
@@ -3180,25 +3125,6 @@ LoginWindow.o: ../../LoginWindow.cpp ../../LoginWindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
 		ui_LoginWindow.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTextEdit \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlDatabase \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqldatabase.h \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
@@ -3214,7 +3140,9 @@ LoginWindow.o: ../../LoginWindow.cpp ../../LoginWindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMessageBox \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QRandomGenerator \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LoginWindow.o ../../LoginWindow.cpp
 
 Profile.o: ../../Profile.cpp ../../Profile.h \
@@ -3407,30 +3335,6 @@ Profile.o: ../../Profile.cpp ../../Profile.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		ui_Profile.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLineEdit \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlineedit.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlDatabase \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqldatabase.h \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qtsqlglobal.h \
@@ -3637,31 +3541,6 @@ RegisterWindow.o: ../../RegisterWindow.cpp ../../RegisterWindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		ui_RegisterWindow.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTextEdit \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QCryptographicHash \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qcryptographichash.h \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlDatabase \
@@ -3678,7 +3557,11 @@ RegisterWindow.o: ../../RegisterWindow.cpp ../../RegisterWindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QRegularExpression \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/QRandomGenerator \
+		../../../Qt/6.8.2/gcc_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o RegisterWindow.o ../../RegisterWindow.cpp
 
 Theory.o: ../../Theory.cpp ../../Theory.h \
@@ -3875,21 +3758,6 @@ Theory.o: ../../Theory.cpp ../../Theory.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
 		ui_Theory.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QFormLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qformlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QFrame \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QStackedWidget \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstackedwidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QFile \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfile.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfiledevice.h \
@@ -4087,30 +3955,6 @@ lessonwidget.o: ../../lessonwidget.cpp ../../lessonwidget.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		ui_lessonwidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QFrame \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QTextBrowser \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextbrowser.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QFile \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfile.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qfiledevice.h
@@ -4287,8 +4131,6 @@ main.o: ../../main.cpp ../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/QSqlQuery \
 		../../../Qt/6.8.2/gcc_64/include/QtSql/qsqlquery.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QDebug \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QStandardPaths \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/qstandardpaths.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/QDir \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qdir.h \
 		../../../Qt/6.8.2/gcc_64/include/QtCore/qdirlisting.h \
@@ -4536,68 +4378,9 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
 		ui_mainwindow.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QFrame \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QMenuBar \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmenubar.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qmenu.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QStackedWidget \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstackedwidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QStatusBar \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qstatusbar.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
 		../../Diary.h \
+		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
 		../../History.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QPen \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QFont \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QAbstractSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qabstractseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QChart \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QLegend \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qlegend.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsWidget \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpainterpath.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QBrush \
-		../../../Qt/6.8.2/gcc_64/include/QtCore/QMargins \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QLineSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qlineseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QXYSeries \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qxyseries.h \
-		../../../Qt/6.8.2/gcc_64/include/QtGui/QImage \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QValueAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qvalueaxis.h \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/QDateTimeAxis \
-		../../../Qt/6.8.2/gcc_64/include/QtCharts/qdatetimeaxis.h \
 		../../Theory.h \
 		../../Profile.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp

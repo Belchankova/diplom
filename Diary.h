@@ -15,12 +15,11 @@ public:
     explicit Diary(QWidget *parent = nullptr);
     ~Diary();
 
-private slots:
-    void saveEntry();
-
 signals:
     void entrySaved();
 
+private slots:
+    void saveEntry();
 
 private:
     Ui::Diary *ui;

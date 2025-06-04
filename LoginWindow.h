@@ -23,6 +23,7 @@ public:
 private slots:
     void on_vhod_clicked();            // Войти
     void on_registerButton_clicked();  // Перейти к регистрации
+    void on_pokazatButton_clicked();
 
 
 

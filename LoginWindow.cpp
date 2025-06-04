@@ -23,7 +23,7 @@ LoginWindow::LoginWindow(QWidget *parent) :
 
     connect(ui->vhod, &QPushButton::clicked, this, &LoginWindow::on_vhod_clicked);
     connect(ui->registerButton, &QPushButton::clicked, this, &LoginWindow::on_registerButton_clicked);
-
+    connect(ui->pokazat, &QPushButton::clicked, this, &LoginWindow::on_pokazatButton_clicked);
 
 }
 
@@ -42,15 +42,15 @@ QString LoginWindow::hashPassword(const QString &password)
 // Войти
 void LoginWindow::on_vhod_clicked()
 {
-    QString username = ui->login->toPlainText().trimmed();
-    QString password = ui->password->text().trimmed();
+    QString username = ui->loginEdit->text().trimmed();
+    QString password = ui->passwordEdit->text().trimmed();
 
     if (username.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "Ошибка", "Введите логин и пароль.");
         return;
     }
 
-    QSqlDatabase db = QSqlDatabase::database("UserConnection");
+    QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
     query.prepare("SELECT password_hash FROM users WHERE username = :username");
     query.bindValue(":username", username);
@@ -107,6 +107,17 @@ void LoginWindow::on_registerButton_clicked()
     connect(regWin, &QObject::destroyed, this, [=]() {
         regWin = nullptr;
     });
+}
+void LoginWindow::on_pokazatButton_clicked()
+{
+    passwordVisible = !passwordVisible;
+
+    ui->passwordEdit->setEchoMode(
+        passwordVisible ? QLineEdit::Normal
+                        : QLineEdit::Password
+        );
+
+
 }
 
 

@@ -16,7 +16,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -30,10 +29,12 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_5;
     QFormLayout *formLayout;
-    QTextEdit *login;
-    QWidget *widget_2;
-    QLineEdit *password;
+    QLineEdit *loginEdit;
+    QWidget *widget_3;
+    QLineEdit *passwordEdit;
+    QPushButton *pokazat;
     QSpacerItem *horizontalSpacer_6;
+    QWidget *widget_2;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *vhod;
@@ -69,44 +70,51 @@ public:
 
         formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
-        login = new QTextEdit(LoginWindow);
-        login->setObjectName("login");
+        loginEdit = new QLineEdit(LoginWindow);
+        loginEdit->setObjectName("loginEdit");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(login->sizePolicy().hasHeightForWidth());
-        login->setSizePolicy(sizePolicy);
-        login->setMinimumSize(QSize(300, 40));
-        login->setMaximumSize(QSize(16777215, 40));
-        login->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        sizePolicy.setHeightForWidth(loginEdit->sizePolicy().hasHeightForWidth());
+        loginEdit->setSizePolicy(sizePolicy);
+        loginEdit->setMinimumSize(QSize(300, 40));
+        loginEdit->setMaximumSize(QSize(16777214, 40));
+        loginEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"padding-top: 5px;"));
-        login->setTabChangesFocus(false);
+""));
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, login);
+        formLayout->setWidget(0, QFormLayout::LabelRole, loginEdit);
 
-        widget_2 = new QWidget(LoginWindow);
-        widget_2->setObjectName("widget_2");
+        widget_3 = new QWidget(LoginWindow);
+        widget_3->setObjectName("widget_3");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
-        widget_2->setSizePolicy(sizePolicy1);
+        sizePolicy1.setHeightForWidth(widget_3->sizePolicy().hasHeightForWidth());
+        widget_3->setSizePolicy(sizePolicy1);
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, widget_2);
+        formLayout->setWidget(0, QFormLayout::FieldRole, widget_3);
 
-        password = new QLineEdit(LoginWindow);
-        password->setObjectName("password");
-        sizePolicy.setHeightForWidth(password->sizePolicy().hasHeightForWidth());
-        password->setSizePolicy(sizePolicy);
-        password->setMinimumSize(QSize(300, 40));
-        password->setMaximumSize(QSize(16777215, 40));
-        password->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        passwordEdit = new QLineEdit(LoginWindow);
+        passwordEdit->setObjectName("passwordEdit");
+        sizePolicy.setHeightForWidth(passwordEdit->sizePolicy().hasHeightForWidth());
+        passwordEdit->setSizePolicy(sizePolicy);
+        passwordEdit->setMinimumSize(QSize(300, 40));
+        passwordEdit->setMaximumSize(QSize(16777215, 40));
+        passwordEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
 ""));
-        password->setEchoMode(QLineEdit::EchoMode::Password);
+        passwordEdit->setEchoMode(QLineEdit::EchoMode::Password);
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, password);
+        formLayout->setWidget(1, QFormLayout::LabelRole, passwordEdit);
+
+        pokazat = new QPushButton(LoginWindow);
+        pokazat->setObjectName("pokazat");
+        sizePolicy1.setHeightForWidth(pokazat->sizePolicy().hasHeightForWidth());
+        pokazat->setSizePolicy(sizePolicy1);
+        pokazat->setStyleSheet(QString::fromUtf8("image: url(:/new/prefix1/\320\230\320\267\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\321\217/\320\264\320\270\320\277\320\273\320\276\320\274 \321\204\320\276\321\202\320\272\320\270/eye.png);"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, pokazat);
 
 
         horizontalLayout_3->addLayout(formLayout);
@@ -117,6 +125,13 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_3);
+
+        widget_2 = new QWidget(LoginWindow);
+        widget_2->setObjectName("widget_2");
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
+
+        verticalLayout->addWidget(widget_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -193,8 +208,9 @@ public:
     void retranslateUi(QWidget *LoginWindow)
     {
         LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "DiaBelka", nullptr));
-        login->setPlaceholderText(QCoreApplication::translate("LoginWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
-        password->setPlaceholderText(QCoreApplication::translate("LoginWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
+        loginEdit->setPlaceholderText(QCoreApplication::translate("LoginWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
+        passwordEdit->setPlaceholderText(QCoreApplication::translate("LoginWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
+        pokazat->setText(QString());
         vhod->setText(QCoreApplication::translate("LoginWindow", "\320\222\320\276\320\271\321\202\320\270", nullptr));
         registerButton->setText(QCoreApplication::translate("LoginWindow", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
     } // retranslateUi

@@ -22,8 +22,8 @@ RegisterWindow::~RegisterWindow()
 
 void RegisterWindow::on_registerButton_clicked()
 {
-    QString username = ui->loginRegister->toPlainText().trimmed();
-    QString password = ui->passwordRegister->toPlainText().trimmed();
+    QString username = ui->loginRegister->text().trimmed();
+    QString password = ui->passwordRegister->text().trimmed();
     QString confirmPassword = ui->confirmPasswordRegister->text().trimmed();
 
     if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
@@ -46,7 +46,7 @@ void RegisterWindow::on_registerButton_clicked()
 
     QString hash = hashPassword(password);
 
-    QSqlDatabase db = QSqlDatabase::database("UserConnection");
+    QSqlDatabase db = QSqlDatabase::database();
     if (!db.isOpen()) {
         QMessageBox::critical(this, "Ошибка", "Не удалось подключиться к базе данных.");
         return;
