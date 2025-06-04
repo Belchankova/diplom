@@ -23,7 +23,10 @@ private slots:
 
 private:
     Ui::RegisterWindow *ui;
-    QString hashPassword(const QString &password);
+
+    QString generateSalt(int length = 16); // Добавь объявление
+    QString hashPasswordWithSalt(const QString &password, const QString &salt); // Добавь объявление
+
 };
 
 #endif // REGISTERWINDOW_H

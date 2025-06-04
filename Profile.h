@@ -23,9 +23,8 @@ private slots:
 private:
     Ui::Profile *ui;
     QString currentUsername;
-
-    QString hashPassword(const QString &password);
 };
 
 #endif // PROFILE_H
+
 

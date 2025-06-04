@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -26,13 +25,11 @@ class Ui_Profile
 public:
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_3;
     QWidget *photo;
     QVBoxLayout *verticalLayout;
     QLabel *usernameLabel;
-    QLineEdit *passwordLineEdit;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *changePasswordButton;
@@ -52,14 +49,12 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_3);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
         photo = new QWidget(Profile);
         photo->setObjectName("photo");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
@@ -77,30 +72,18 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         usernameLabel = new QLabel(Profile);
         usernameLabel->setObjectName("usernameLabel");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(usernameLabel->sizePolicy().hasHeightForWidth());
         usernameLabel->setSizePolicy(sizePolicy1);
-        usernameLabel->setMinimumSize(QSize(0, 45));
+        usernameLabel->setMinimumSize(QSize(200, 40));
+        usernameLabel->setMaximumSize(QSize(16777215, 40));
         usernameLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius:10px;"));
         usernameLabel->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
 
         verticalLayout->addWidget(usernameLabel);
-
-        passwordLineEdit = new QLineEdit(Profile);
-        passwordLineEdit->setObjectName("passwordLineEdit");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(45);
-        sizePolicy2.setHeightForWidth(passwordLineEdit->sizePolicy().hasHeightForWidth());
-        passwordLineEdit->setSizePolicy(sizePolicy2);
-        passwordLineEdit->setMinimumSize(QSize(0, 45));
-        passwordLineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"border-radius:10px;"));
-
-        verticalLayout->addWidget(passwordLineEdit);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -126,15 +109,12 @@ public:
 
         horizontalLayout_2->addLayout(verticalLayout);
 
-
-        horizontalLayout_3->addLayout(horizontalLayout_2);
-
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_4);
+        horizontalLayout_2->addItem(horizontalSpacer_4);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_3);
+        verticalLayout_2->addLayout(horizontalLayout_2);
 
         verticalSpacer_2 = new QSpacerItem(20, 122, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 

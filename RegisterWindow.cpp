@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QRegularExpression>
+#include <QRandomGenerator>
 
 RegisterWindow::RegisterWindow(QWidget *parent) :
     QWidget(parent),
@@ -44,7 +45,11 @@ void RegisterWindow::on_registerButton_clicked()
         return;
     }
 
-    QString hash = hashPassword(password);
+    QString salt = generateSalt();
+    QString hash = hashPasswordWithSalt(password, salt);
+    QString fullHash = salt + ":" + hash;
+
+
 
     QSqlDatabase db = QSqlDatabase::database();
     if (!db.isOpen()) {
@@ -55,7 +60,9 @@ void RegisterWindow::on_registerButton_clicked()
     QSqlQuery query(db);
     query.prepare("INSERT INTO users (username, password_hash) VALUES (:username, :password_hash)");
     query.bindValue(":username", username);
-    query.bindValue(":password_hash", hash);
+    query.bindValue(":password_hash", fullHash);
+
+
 
     if (!query.exec()) {
         QMessageBox::critical(this, "Ошибка", "Имя пользователя уже занято.");
@@ -68,9 +75,18 @@ void RegisterWindow::on_registerButton_clicked()
     close();
 }
 
+QString RegisterWindow::generateSalt(int length) {
+    const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
+    QString salt;
+    for (int i = 0; i < length; ++i) {
+        int index = QRandomGenerator::global()->bounded(possibleCharacters.length());
+        salt.append(possibleCharacters.at(index));
+    }
+    return salt;
+}
 
-QString RegisterWindow::hashPassword(const QString &password)
-{
-    QByteArray hash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256);
+QString RegisterWindow::hashPasswordWithSalt(const QString &password, const QString &salt) {
+    QByteArray salted = (salt + password).toUtf8();
+    QByteArray hash = QCryptographicHash::hash(salted, QCryptographicHash::Sha256);
     return QString(hash.toHex());
 }

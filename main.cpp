@@ -29,6 +29,8 @@ void connectToDatabase() {
         qDebug() << "Ошибка создания таблицы users:" << query.lastError().text();
     }
 
+
+
     // Создание таблицы записей
     if (!query.exec(
             "CREATE TABLE IF NOT EXISTS diary_entries ("

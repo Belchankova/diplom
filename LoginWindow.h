@@ -30,7 +30,8 @@ private slots:
 
 private:
     Ui::LoginWindow *ui;
-    QString hashPassword(const QString &password);
+    QString hashPasswordWithSalt(const QString &password, const QString &salt);
+
     RegisterWindow *regWin = nullptr;
     MainWindow *mainWin = nullptr;
     static QString m_currentUsername;

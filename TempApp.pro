@@ -12,6 +12,7 @@ QT += charts widgets sql
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ChangePasswordDialog.cpp \
     Diary.cpp \
     History.cpp \
     LoginWindow.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    ChangePasswordDialog.h \
     Diary.h \
     History.h \
     LoginWindow.h \
@@ -33,6 +35,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    ChangePasswordDialog.ui \
     Diary.ui \
     History.ui \
     LoginWindow.ui \

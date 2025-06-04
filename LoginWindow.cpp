@@ -32,12 +32,8 @@ LoginWindow::~LoginWindow()
     delete ui;
 }
 
-// SHA-256 хэширование пароля
-QString LoginWindow::hashPassword(const QString &password)
-{
-    QByteArray hash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256);
-    return QString(hash.toHex());
-}
+
+
 
 // Войти
 void LoginWindow::on_vhod_clicked()
@@ -63,7 +59,18 @@ void LoginWindow::on_vhod_clicked()
     if (query.next()) {
         QString storedHash = query.value(0).toString();
 
-        if (storedHash == hashPassword(password)) {
+        QStringList parts = storedHash.split(":");
+
+        if (parts.size() != 2) {
+            QMessageBox::critical(this, "Ошибка", "Неверный формат пароля в базе данных.");
+            return;
+        }
+
+        QString salt = parts[0];
+        QString correctHash = parts[1];
+        QString inputHash = hashPasswordWithSalt(password, salt);
+
+        if (inputHash == correctHash) {
             m_currentUsername = username;
 
             if (!mainWin) {
@@ -79,6 +86,7 @@ void LoginWindow::on_vhod_clicked()
         } else {
             QMessageBox::warning(this, "Ошибка", "Неверный пароль.");
         }
+
     } else {
         QMessageBox::warning(this, "Ошибка", "Пользователь не найден.");
     }
@@ -118,6 +126,12 @@ void LoginWindow::on_pokazatButton_clicked()
         );
 
 
+}
+QString LoginWindow::hashPasswordWithSalt(const QString &password, const QString &salt)
+{
+    QByteArray salted = (salt + password).toUtf8();
+    QByteArray hash = QCryptographicHash::hash(salted, QCryptographicHash::Sha256);
+    return QString(hash.toHex());
 }
 
 
