@@ -11,6 +11,11 @@
 #include <QtCharts/QValueAxis>
 #include <QtCharts/QDateTimeAxis>
 #include <QDateTime>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QFileDialog>
+#include <QMessageBox>
+
 
 //QT_CHARTS_USE_NAMESPACE
 
@@ -19,6 +24,7 @@ History::History(QWidget *parent) :
     ui(new Ui::History)
 {
     ui->setupUi(this);
+    connect(ui->exportButton, &QPushButton::clicked, this, &History::exportToPdf);
 
     // Настройка таблицы
     ui->diaryList->setColumnCount(5);
@@ -119,4 +125,41 @@ void History::buildSugarChart(int userId)
 
     ui->chartView->setChart(chart);
     ui->chartView->setRenderHint(QPainter::Antialiasing);
+}
+void History::exportToPdf()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, "Сохранить в PDF", "История.pdf", "*.pdf");
+    if (fileName.isEmpty()) return;
+
+    QPdfWriter writer(fileName);
+    writer.setPageSize(QPageSize::A4);
+    writer.setResolution(300);
+    QPainter painter(&writer);
+    if (!painter.isActive()) {
+        QMessageBox::critical(this, "Ошибка", "Не удалось создать PDF.");
+        return;
+    }
+
+    int margin = 50;
+    int y = margin;
+
+    // Заголовок
+    painter.setFont(QFont("Arial", 16, QFont::Bold));
+    painter.drawText(QRect(margin, y, writer.width() - 2 * margin, 40), Qt::AlignCenter, "История измерений");
+    y += 60;
+
+    // Таблица
+    QPixmap tablePixmap = ui->diaryList->grab();
+    int tableHeight = writer.width() * tablePixmap.height() / tablePixmap.width(); // пропорционально
+    painter.drawPixmap(margin, y, writer.width() - 2 * margin, tableHeight, tablePixmap);
+    y += tableHeight + 30;
+
+    // График
+    QPixmap chartPixmap = ui->chartView->grab();
+    int chartHeight = writer.width() * chartPixmap.height() / chartPixmap.width();
+    painter.drawPixmap(margin, y, writer.width() - 2 * margin, chartHeight, chartPixmap);
+
+    painter.end();
+
+    QMessageBox::information(this, "Готово", "PDF успешно сохранён: " + fileName);
 }

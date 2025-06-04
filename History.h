@@ -17,6 +17,8 @@ public:
 
 public slots:
     void reload();
+    void exportToPdf();
+
 
 private:
     Ui::History *ui;

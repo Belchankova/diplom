@@ -34,6 +34,7 @@ public:
     QTableWidget *diaryList;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
+    QPushButton *exportButton;
     QPushButton *deleteButton;
     QSpacerItem *horizontalSpacer_4;
     QSpacerItem *horizontalSpacer_2;
@@ -85,11 +86,18 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        deleteButton = new QPushButton(History);
-        deleteButton->setObjectName("deleteButton");
+        exportButton = new QPushButton(History);
+        exportButton->setObjectName("exportButton");
         QSizePolicy sizePolicy2(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(exportButton->sizePolicy().hasHeightForWidth());
+        exportButton->setSizePolicy(sizePolicy2);
+
+        horizontalLayout_2->addWidget(exportButton);
+
+        deleteButton = new QPushButton(History);
+        deleteButton->setObjectName("deleteButton");
         sizePolicy2.setHeightForWidth(deleteButton->sizePolicy().hasHeightForWidth());
         deleteButton->setSizePolicy(sizePolicy2);
         deleteButton->setStyleSheet(QString::fromUtf8("background-color: rgb(224, 27, 36);"));
@@ -122,6 +130,7 @@ public:
     void retranslateUi(QWidget *History)
     {
         History->setWindowTitle(QCoreApplication::translate("History", "Form", nullptr));
+        exportButton->setText(QCoreApplication::translate("History", "\320\262 PDF", nullptr));
         deleteButton->setText(QCoreApplication::translate("History", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
